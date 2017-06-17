@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources 'cafes'
+  resources :cafes
+  # resources :notes
 end

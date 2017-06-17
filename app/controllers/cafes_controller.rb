@@ -26,9 +26,19 @@ class CafesController < ApplicationController
   end
 
   def update
+    if @cafe.update(cafe_params)
+      redirect_to @cafe
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @cafe.destroy
+
+    redirect_to cafes_path
+    # redirect_to root_path
+
   end
 
   private

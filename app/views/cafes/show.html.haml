@@ -2,3 +2,5 @@
 %p= @cafe.description
 
 = link_to 'All Cafes ', cafes_path
+= link_to 'Edit', edit_cafe_path(@cafe)
+= link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
