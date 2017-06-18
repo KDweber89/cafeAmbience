@@ -9,11 +9,11 @@ class CafesController < ApplicationController
   end
 
   def new
-    @cafe = Cafe.new
+    @cafe = current_user.cafes.build
   end
 
   def create
-    @cafe = Cafe.new(cafe_params)
+    @cafe = current_user.cafes.build(cafe_params)
 
     if @cafe.save
       redirect_to @cafe
