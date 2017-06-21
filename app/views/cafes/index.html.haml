@@ -1,3 +1,5 @@
 - @cafes.each do |cafe|
-  %h2= link_to cafe.name, cafe
-  %p= cafe.description
+  %a{ href: (url_for [cafe])}
+    .cafe
+      %p.name= cafe.name
+      %p.description= cafe.description
