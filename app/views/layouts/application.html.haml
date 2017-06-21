@@ -1,0 +1,24 @@
+!!!
+%html
+%head
+  %title CafeAmbience
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header
+    .header_inner
+      / # = link_to image_tag('logo.svg'), root_path, id: 'logo'
+      %nav
+        = link_to 'About', about_path
+        = link_to 'Cafes', cafes_path
+        -if user_signed_in?
+          = link_to 'New Cafe', new_cafe_path
+          = link_to 'Sign Out', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'log_in', new_user_session_path
+  %p.notice= notice
+  %p.alert= alert
+
+  = yield
+
+
