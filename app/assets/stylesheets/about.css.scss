@@ -64,6 +64,13 @@ html, body {
   color:#400000;
   }
 
+
+@media screen and (max-width: 768px) {
+  .main{
+    width: 100%;
+  }
+}
+
 .main h2 {
   margin: 1;
   padding: .5em;
@@ -136,6 +143,7 @@ html, body {
 }
 
 .threed > .item{
+  min-height: 100px;
   position: absolute;
   -webkit-transform: perspective( 600px ) rotateY( 0deg );
   transform: perspective( 600px ) rotateY( 0deg );
@@ -147,10 +155,10 @@ html, body {
 }
 
 .threed > .itemback{
+  min-height: 100px;
   position: absolute;
   -webkit-transform: perspective( 600px ) rotateY( 180deg );
   transform: perspective( 600px ) rotateY( 180deg );
-  // background: black; width: 17em; height: 15em; border-radius: 7px;
   background: black; width: 10em; height: 10em; border-radius: 7px;
   -webkit-backface-visiblity: hidden;
   backface-visibility: hidden;
@@ -159,11 +167,13 @@ html, body {
 }
 
 .threed:hover > .item {
+  min-height: 100px;
   -webkit-transform: perspective( 600px ) rotateY( -180deg );
   transform: perspective( 600px ) rotateY( -180deg );
 }
 
 .threed:hover > .itemback {
+  min-height: 100px;
   -webkit-transform: perspective( 600px ) rotateY( 0deg );
   transform: perspective( 600px ) rotateY( 0deg );
 }
