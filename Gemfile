@@ -17,6 +17,7 @@ gem 'redis', '~> 3.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'haml', '~> 4.0.5'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'font-awesome-rails'
 gem 'capistrano-rails', group: :development
 gem 'erubis', '~> 2.7'
 gem 'simple_form'
