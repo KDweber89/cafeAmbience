@@ -1,0 +1,103 @@
+THIS IS THE MAPS VIEW
+
+
+.header
+  .h2 Feel free to explore these cafe's that we have visited via the map view
+
+
+
+:javascript
+
+/ FIGURE OUT HOW TO DO THIS SHIT KURT
+
+
+/ function initialize() {
+/    var BentPaddleBrewing = new google.maps.LatLng(46.767728,-92.122006);
+/    var CornerBakeryCafe = new google.maps.LatLng(41.8879918,-87.6252275);
+/    var Cossettas = new google.maps.LatLng(44.943812,-93.10396);
+/    var Kramaraczuks = new google.maps.LatLng(44.9878726,-93.2574676);
+/    var MuddyPig = new google.maps.LatLng(44.946271,-93.1261);
+/    var PerkPlace = new google.maps.LatLng(46.82127,-92.098621);
+/    var WildGoose = new google.maps.LatLng(46.583606,-95.576545);
+/    var AtomicCoffee = new google.maps.LatLng(46.878848,-96.787848);
+/    var EspressoExpose = new google.maps.LatLng(44.9735655, -93.2294970);
+/    var FinnishBistro = new google.maps.LatLng(44.981517,-93.194917);
+/    var ColossalMin = new google.maps.LatLng(44.982673,-93.1956807);
+/    var CoffeeEmporium = new google.maps.LatLng(39.1077626,-84.5125284);
+/    var MoxxCoffee = new google.maps.LatLng(38.3460124,-81.6275726);
+/    var ChilliBrew = new google.maps.LatLng(39.728807,-86.097466);
+/    var ElixrCoffee = new google.maps.LatLng(39.9470367,-75.1672515);
+/    var BlueState = new google.maps.LatLng(41.3100, -72.9236);
+
+/    /*var BalzacCoffee = new google.maps.LatLng(53.55254, 9.99666);
+/    var Myeongryun = new google.maps.LatLng(37.584312,126.9966479);*/
+
+
+
+
+
+
+
+/    var bounds = new google.maps.LatLngBounds();
+/       var map_canvas = document.getElementById('Maps_Image');
+/       var map_options = {
+/         center: new google.maps.LatLng(40.8759041,-88.7103068),
+/         zoom:5,
+/         mapTypeId: google.maps.MapTypeId.ROADMAP
+/       }
+/       var map = new google.maps.Map(map_canvas, map_options);
+
+/   var markers = [
+/       [AtomicCoffee, 'images/Maps/winebar.png','Atomic Coffee and Wine Bar', 'AtomicCoffee.html'],
+/       [BentPaddleBrewing,'images/Maps/brewery1.png', 'Bent Paddle Brewing Co.', 'BentPaddleBrewing.html'],
+/       [CornerBakeryCafe,'images/Maps/bread.png', 'Corner Bakery Cafe no. 19', 'cornerbakery.html'],
+/       [Cossettas, 'images/Maps/restaurant_italian.png', 'Cossettas St.Paul', 'cossettas_home.html'],
+/       [Kramaraczuks,'images/Maps/butcher-2.png', 'Kramaraczuks Sausage Company', 'Kramaraczuks_home.html'],
+/       [MuddyPig,'images/Maps/bar.png', 'Muddy Pig - Minneapolis', 'muddypig.html'],
+/       [PerkPlace, 'images/Maps/coffee.png', 'Perk Place Coffeehouse and Bakery', 'PerkPlaceCafe.html'],
+/       [WildGoose, 'images/Maps/gifts.png', 'Wild Goose Gifts and Coffee', 'TheWildGoose.html'],
+/       [EspressoExpose, 'images/Maps/2coffee.png', 'Espresso Expose', 'EspressoExpose.html'],
+/       [FinnishBistro, 'images/Maps/2coffee.png', 'Finnish Bistro', 'FinnishBistro.html'],
+/       [ColossalMin,'images/Maps/coffee.png', 'Colossal Cafe Minneapolis', 'colossalcafe.html'],
+/       [CoffeeEmporium, 'images/Maps/2coffee.png', 'Coffee Emporium', 'coffeeEmporium.html'],
+/       [MoxxCoffee, 'images/Maps/coffee.png', 'Moxx Coffee', 'moxxcoffee.html'],
+/       [ChilliBrew, 'images/Maps/brewery1.png', 'Chilli Water Brewing', 'ChilliWaterBrewing.html'],
+/       [ElixrCoffee, 'images/Maps/2coffee.png', 'Elixr Coffee', 'ElixrCoffee.html'],
+/       [BlueState, 'images/Maps/2coffee.png', 'Blue State Coffee', 'BlueStateCoffee.html'],
+
+
+/       /*[BalzacCoffee, 'images/Maps/2coffee.png', 'Balzac Coffee', 'BalzacCoffee.html'],
+/       [Myeongryun, 'images/Maps/2coffee.png', 'Myeongryun', 'myeongryun.html']*/
+
+
+/    ];
+
+/   var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+/   //setup markers and infowindows
+/   for(i=0; i<markers.length; i++){
+/       //alert(markers[i][0]);
+/       ////bounds.extend(markers[i][0]);
+/       marker = new google.maps.Marker({
+/           position: markers[i][0],
+/           icon: markers[i][1],
+/           title: markers[i][2],
+/           map: map,
+/           clickable: true,
+/           flat: true,
+/           body: markers[i][3]
+/       });
+
+/   //infowindows:
+/       google.maps.event.addListener(marker, 'mousedown', (function(marker,i) {
+/           return function(){//alert(marker.title);
+/               infoWindow.setContent('<div><h3><a href="http://cafeambience.com/' + marker.body + '" target="_self">'
+/                   + marker.title + '</a></h3><div><p>Visit and Listen to the Ambiences from ' + marker.title + '.</div></div>');
+/               infoWindow.open(map, marker);
+/           }
+/       })(marker, i));
+/       //map.fitBounds(bounds);
+/   }//end for
+/  }//end initialize
+
+/     google.maps.event.addDomListener(window, 'load', initialize);

@@ -9,10 +9,10 @@
 %body
   %header
     .header_inner
-      / # = link_to image_tag('logo.svg'), root_path, id: 'logo'
       %nav
         = link_to 'About', about_path
         = link_to 'Cafes', cafes_path
+        = link_to 'Maps', maps_path
         -if user_signed_in?
           = link_to 'New Cafe', new_cafe_path
           = link_to 'Sign Out', destroy_user_session_path, method: :delete

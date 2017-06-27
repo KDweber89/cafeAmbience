@@ -1,5 +1,7 @@
-- @cafes.each do |cafe|
-  %a{ href: (url_for [cafe])}
-    .cafe
-      %p.name= cafe.name
-      %p.description= cafe.description
+.wrapper_with_patting
+  #cafes.clearfix
+    - @cafes.each do |cafe|
+      %a{ href: (url_for [cafe])}
+        .cafe
+          %p.name= cafe.name
+          %p.description= cafe.description

@@ -22,6 +22,7 @@ gem 'capistrano-rails', group: :development
 gem 'erubis', '~> 2.7'
 gem 'simple_form'
 gem 'devise'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
