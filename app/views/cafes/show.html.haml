@@ -3,6 +3,11 @@
     %h1=  @cafe.name
     %p= @cafe.description
 
+    %image_tag= @cafe.image.url(:medium)
+
+    %h1= @cafe.image
+
     = link_to 'All Cafes ', cafes_path
     = link_to 'Edit', edit_cafe_path(@cafe)
     = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
+

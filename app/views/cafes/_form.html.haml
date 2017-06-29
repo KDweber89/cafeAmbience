@@ -5,3 +5,7 @@
   = c.input :state
   = c.input :editors_note
   = c.submit :submit
+  = c.input :image, as: :file
+
+/ <%= simple_form_for @user, url: users_path do |form| %>
+
