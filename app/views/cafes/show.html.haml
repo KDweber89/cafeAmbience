@@ -1,13 +1,18 @@
-.wrapper_with_padding
-  #cafe_show
-    %h1=  @cafe.name
-    %p= @cafe.description
+/ .wrapper_with_padding
+#cafe_show
+  .test
+    = image_tag @cafe.image.url(:medium)
 
-    %image_tag= @cafe.image.url(:medium)
+    .other_test
+      / %h1=  @cafe.name
+      / %p= @cafe.description
 
-    %h1= @cafe.image
+    .white_logo_image
 
-    = link_to 'All Cafes ', cafes_path
-    = link_to 'Edit', edit_cafe_path(@cafe)
-    = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
+    .second_background_image
+
+
+  = link_to 'All Cafes ', cafes_path
+  = link_to 'Edit', edit_cafe_path(@cafe)
+  = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
 
