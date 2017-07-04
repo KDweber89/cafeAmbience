@@ -1,10 +1,12 @@
 / .banner
 /   Cafe's, Coffeeships, and Breweries
+/ .wrapper_with_patting
 
-.wrapper_with_patting
+.wrapper_with_padding
   #cafes.clearfix
     - @cafes.each do |cafe|
       %a{ href: (url_for [cafe])}
-        .cafe
+        .cafe.callout
+          = image_tag cafe.image.url(:thumb)
           %p.name= cafe.name
           %p.description= cafe.description
