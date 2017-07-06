@@ -66,19 +66,8 @@
   img {
     height: 100vh;
     width: 100%;
-    z-index: 1;
-  }
-
-  .other_test {
-    background-color: red;
     position: relative;
-    margin: auto;
-    float: right;
-    // margin-top: 100px;
-    top: 20px;
-    width: 20%;
-    z-index: 2;
-    opacity: .5;
+    z-index: -1;
   }
 
 }
@@ -102,12 +91,12 @@
   padding: 0;
 }
 
-.banner {
-  position: absolute;
+.cafe_ambience_info {
+  position: relative;
   float: center;
-  margin-bottom: 10px;
-  margin-top: 80px;
-  margin-left: 50px;
+  // margin-bottom: 10px;
+  // margin-top: 80px;
+  // margin-left: 50px;
   border-radius: 10px;
   height: 100px;
   width: auto;
@@ -197,18 +186,3 @@
   }
 
 }
-
-
-
-
-// 26  .wrapper_with_padding {
-// 27    width: 80%;
-// 28    margin: 0 auto;
-// 29    padding: 3.5rem 0;
-
-
-
-
-
-
-

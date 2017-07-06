@@ -2,15 +2,19 @@
 #cafe_show
   .test
     = image_tag @cafe.image.url(:medium)
+    .cafe_ambience_info
+      This is a quick test
 
-    .other_test
-      %h3=  @cafe.name
-      %p= @cafe.description
+    / .other_test
+    /   %h3=  @cafe.name
+    /   %p= @cafe.description
+
 
     .white_logo_image
 
     .second_background_image
-
+      .cafe_ambience_info
+        This is a quick test
 
     / = link_to 'All Cafes ', cafes_path
     / = link_to 'Edit', edit_cafe_path(@cafe)
