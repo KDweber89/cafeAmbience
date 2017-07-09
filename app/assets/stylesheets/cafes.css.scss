@@ -59,7 +59,7 @@
     }
   }
 
-  .test {
+  .image_holding_div {
     position: relative;
   }
 
@@ -91,17 +91,18 @@
   padding: 0;
 }
 
-.cafe_ambience_info {
-  position: relative;
-  float: center;
-  // margin-bottom: 10px;
-  // margin-top: 80px;
-  // margin-left: 50px;
+.cafe_title {
+  position: absolute;
+  top: 200px;
+  display: inline-block;
   border-radius: 10px;
-  height: 100px;
-  width: auto;
-  background-color: #808080;
-  font-family:'MyFonts';
+  height: auto;
+  width: 800px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:'Quintessential';
   font-size:80px;
   font-weight: bold;
   font-variant: normal;
@@ -111,26 +112,14 @@
   color:white;
   }
 
-.framing{
-  position: relative;
-  top: 8em;
-  margin-bottom: 10px;
-  margin-top: 50px;
-  border-radius: 10px;
-  height: 250px;
-  width: 375px;
-  background-color: #FFFFFF;
-  font-family:"verblight";
-  font-size:20px;
-  opacity:.95;
-  color:#600000;
-  border-style:solid;
-  border-width:1px;
-  border-color:black;
-  padding-right:10px;
+.cafe_info{
+  width: 50%;
+  height: auto;
+  // background-color: white;
+  background-color: #808080;
+  opacity: .9;
 
 }
-
 
 .footer {
   position: relative;

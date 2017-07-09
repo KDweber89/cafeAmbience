@@ -3,7 +3,15 @@
   = c.input :description
   = c.input :street_address
   = c.input :state
+
   = c.input :editors_note
+
+
+  = c.label :mp3
+  = c.input :mp3, as: :file
+  / = c.file_field :mp3
+
+
   = c.submit :submit
   = c.input :image, as: :file
 

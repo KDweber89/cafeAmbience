@@ -38,7 +38,6 @@ class CafesController < ApplicationController
 
     redirect_to cafes_path
     # redirect_to root_path
-
   end
 
   private
@@ -48,6 +47,6 @@ class CafesController < ApplicationController
   end
 
   def cafe_params
-    params.require(:cafe).permit(:name, :description, :street_address, :state, :editors_note, :website, :image)
+    params.require(:cafe).permit(:name, :description, :street_address, :state, :editors_note, :website, :image, :mp3)
   end
 end

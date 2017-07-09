@@ -7,3 +7,4 @@ class AddingMoreFieldsToCafes < ActiveRecord::Migration[5.1]
     add_column :cafes, :type, :string
   end
 end
+

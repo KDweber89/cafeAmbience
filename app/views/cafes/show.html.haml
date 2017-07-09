@@ -1,9 +1,16 @@
 / .wrapper_with_padding
+
 #cafe_show
-  .test
+  .image_holding_div
     = image_tag @cafe.image.url(:medium)
-    .cafe_ambience_info
-      This is a quick test
+    .cafe_title
+      Cafe Ambience
+      %br
+      %p
+        Today's cafe from
+        = @cafe.name
+
+
 
     / .other_test
     /   %h3=  @cafe.name
@@ -13,8 +20,29 @@
     .white_logo_image
 
     .second_background_image
-      .cafe_ambience_info
-        This is a quick test
+      .cafe_info
+        %p= @cafe.name
+        %p= @cafe.description
+        %p= @cafe.street_address
+        %p= @cafe.state
+        %p= @cafe.editors_note
+
+        / I need
+        / Type
+        / Price*
+        / Food*
+        / Website
+        / Yelp Link
+
+
+
+
+
+
+
+
+    / .cafe_ambience_info
+    /   This is a quick test
 
     / = link_to 'All Cafes ', cafes_path
     / = link_to 'Edit', edit_cafe_path(@cafe)
