@@ -7,18 +7,16 @@ html, body {
   // background-size: 100%;
   height: 100vh;
   margin: 0;
+}
 
+body.about {
+  background: {
+    image: url(about_background.jpg);
   }
 
-// .about_body {
-//   background-image: url(about_background.jpg);
-//   // , url("../images/about_background.jpg");
-//   // background-image: url("../images/aboutbackground.jpg"), url("../images/aboutbackground.jpg");
-//   max-width: 100%;
-//   background-attachment:fixed;
-//   background-repeat: no-repeat, repeat-y;
-//   background-size: 100%;
-//   }
+  height: 120%;
+  width: 100%;
+}
 
 
 

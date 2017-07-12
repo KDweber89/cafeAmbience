@@ -6,8 +6,11 @@
   #cafes.clearfix
     - @cafes.each do |cafe|
       %a{ href: (url_for [cafe])}
-        .cafe.callout
-          = image_tag cafe.image.url(:thumb)
-          %p.name= cafe.name
-          %p.description= cafe.description
+        .cafe
+          .image_holding_div
+            = image_tag cafe.image.url(:medium)
+            .test
+              / %p this is a test
+              %p.name= cafe.name
+              %p.description= cafe.description
 
