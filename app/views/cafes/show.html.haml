@@ -8,8 +8,6 @@
         Today's cafe from
         = @cafe.name
 
-
-
     / .other_test
     /   %h3=  @cafe.name
     /   %p= @cafe.description
@@ -18,6 +16,9 @@
     .white_logo_image
 
     .second_background_image
+
+      = render partial: 'player'
+
       .cafe_info
         %p= @cafe.name
         %p= @cafe.description
@@ -32,58 +33,11 @@
         / Website
         / Yelp Link
 
-#episode_content
-  #jquery_jplayer_1.jp-jplayer
-  #jp_container_1.jp-audio
-    .jp-type-single
-      .jp-gui.jp-interface
-        %ul.jp-controls
-          %li
-            %a.jp-play{:href => "javascript:;", :tabindex => "1"} 
-          %li
-            %a.jp-pause{:href => "javascript:;", :tabindex => "1"} 
-          %li
-            %a.jp-mute{:href => "javascript:;", :tabindex => "1", :title => "mute"} 
-          %li
-            %a.jp-unmute{:href => "javascript:;", :tabindex => "1", :title => "unmute"} 
-        .jp-progress
-          .jp-seek-bar
-            .jp-play-bar
-        .jp-time-holder
-          .jp-current-time
-        .jp-volume-bar
-          .jp-volume-bar-value
-        .jp-no-solution
-          %span Update Required
-          To play the media you will need to either update your browser to a recent version or update your
-          = succeed "." do
-            %a{:href => "http://get.adobe.com/flashplayer/", :target => "_blank"} Flash plugin
 
-
-:javascript
-  $(document).ready(function(){
-    $("#jquery_jplayer_1").jPlayer({
-      ready: function () {
-        $(this).jPlayer("setMedia", {
-          mp3: "<%= @cafe.mp3.url %>",
-        });
-      },
-      swfPath: "/js",
-      supplied: "mp3"
-    });
-  });
-
-
-
-
-
-
-
-
-    / .cafe_ambience_info
-    /   This is a quick test
 
     / = link_to 'All Cafes ', cafes_path
     / = link_to 'Edit', edit_cafe_path(@cafe)
     / = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
 
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");z
