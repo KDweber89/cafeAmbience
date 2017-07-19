@@ -1,13 +1,12 @@
 
 /   This may be a caching thing, but a comment here enables the first header
-/ .about_body
-.container.about
-  .row
-    .col-md-12
-      .main
+
+.about
+  .container
+    .row
+      .col-md-12.main
         %h2
           What is Cafe Ambience
-
         %p
           There are two people in this world: those who study well in silence and those who study well with some kind of ambient noise. For many of us, "that cafe sound" provides the perfect energy to concentrate on some work or relax over a cup of joe. The combined mix of sounds- clatter of silverware on dishes and the lull of voices of a busy lunch hour- makes for the perfect background white noise. Cafe Ambience brings you that mood.
 
@@ -26,4 +25,5 @@
         %p
           Apart from the fun we have making this website and recording different atmospheres, we simply love local cafes. It is our joy to visit new cafes and restaurants, and capture their ambience, and bring them to you.
 
-      = render partial: 'team'
+      .team-container
+        = render partial: 'team'

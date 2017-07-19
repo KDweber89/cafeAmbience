@@ -9,35 +9,27 @@ html, body {
   margin: 0;
 }
 
-body.about {
-  background: {
-    image: url(about_background.jpg);
-  }
-
-  height: 120%;
-  width: 100%;
+.about {
+  background: url(about_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
 }
-
-
-
 
  h1 {
   font-family: 'MyFonts' , Fallback, times new roman;
 }
 
-// .top {
-//     position: relative;
-//     display: block;
-//     // margin-auto;
-//     border-radius: 10px;
-//     height: 7em;
-//     width: 30em;
-//     background-color: #808080;
-//     opacity:.9;
-//     text-align: center;
-//     top: 7em;
-//     left: 12em;
-//   }
+.team-container{
+  width: 100%;
+  display: block;
+  height: 200px;
+  margin-top: 50px;
+  vertical-align: middle;
+  padding-left: 90px;
+}
 
 .top h1 {
   display: inline-block;
@@ -50,9 +42,11 @@ body.about {
 }
 
 .main{
-  position: relative;
-  display: block;
+  // position: relative;
+  // position: absolute;
+  // display: block;
   margin: auto;
+  top: 10px;
   border-radius: 10px;
   height: auto;
   width: 90%;
@@ -83,7 +77,6 @@ body.about {
 .reminder{
   width: 100%;
   margin: auto;
-
 }
 
 .reminder h2{
