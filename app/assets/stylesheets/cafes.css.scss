@@ -4,7 +4,6 @@
     width: 30%;
     height: 200px;
     margin: 1rem 1%;
-    // padding: 1.5rem 2.5%;
     float: left;
     border-radius: .4rem;
     position: relative;
@@ -67,6 +66,11 @@
 
   .image_holding_div {
     position: relative;
+    background-size: cover;
+    // border-style: solid;
+    // border-width: 20px;
+    // border-color: black;
+    // box-shadow: 1px, 4px;
   }
 
   img {
@@ -107,6 +111,27 @@
   // %p{
   //   font-size: 5px;
   // }
+}
+
+
+.framing{
+  position: relative;
+  /*float: center;*/
+  top: 8em;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  height: 250px;
+  width: 375px;
+  background-color: #FFFFFF;
+  font-family:"verblight";
+  font-size:20px;
+  opacity:.95;
+  color:#600000;
+  border-style:solid;
+  border-width:1px;
+  border-color:black;
+  padding-right:10px;
 }
 
 .cafe_title {

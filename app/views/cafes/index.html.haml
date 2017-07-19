@@ -2,15 +2,34 @@
 /   Cafe's, Coffeeships, and Breweries
 / .wrapper_with_patting
 
-.wrapper_with_padding
-  #cafes.clearfix
-    - @cafes.each do |cafe|
-      %a{ href: (url_for [cafe])}
-        .cafe
-          .image_holding_div
-            = image_tag cafe.image.url(:medium)
-            .test
-              / %p this is a test
-              %p.name= cafe.name
-              %p.description= cafe.description
+.common-background
+  .wrapper_with_padding
+    / #cafes.clearfix
+    #cafes
+      - @cafes.each do |cafe|
+        %a{ href: (url_for [cafe])}
+          .cafe
+            .image_holding_div
+              = image_tag cafe.image.url(:medium)
+              .test
+                / %p this is a test
+                / %p.name= cafe.name
+                / %p.description= cafe.description
+
+/ .common-background
+/   .wrapper_with_padding
+/     / #cafes.clearfix
+/     #cafes
+/       %figure.fig.fig-frame.fig-fill-blur{"data-caption" => "slide:down", "data-content" => "stack:fall", "data-figset" => "group-1", "data-interact" => "focus:top", "data-intro" => "fade", "data-state" => "ready"}
+/         - @cafes.each do |cafe|
+/           %a{ href: (url_for [cafe])}
+/             .cafe
+/               %figcaption.fig-caption
+/                 .fig-overlay
+/                   %canvas{:height => "250", :width => "375"}
+/                 .fig-caption-inner
+/                   %h1#focus= cafe.name
+/                   %p{:style => "font-size:13px"}= cafe.description
+/               .image_holding_div.fig-img
+/                 = image_tag cafe.image.url(:medium)
 
