@@ -1,8 +1,9 @@
-.banner
-  Cafe's, Coffeeships, and Breweries
 
 .common-background
   .wrapper_with_padding
+    .cafe-index-title
+      %h2
+        Cafe's, Coffeeships, and Breweries
     #cafes
       - @cafes.each do |cafe|
         %a{ href: (url_for [cafe])}

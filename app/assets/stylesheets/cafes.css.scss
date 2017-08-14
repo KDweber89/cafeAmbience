@@ -160,6 +160,14 @@
   margin-top: 75%;
 }
 
+.cafe-index-title{
+  background-color: grey;
+  color: white;
+  width: 50%;
+  opacity: .7;
+  text-align: center;
+}
+
 // .contactInfo{
 //   position: relative;
 //   width:100%  ;
@@ -172,24 +180,24 @@
 //   text-align: center;
 //   }
 
-#MapLink{
-  position: absolute;
-  width:100%;
-  background-color:#808080;
-  left:-1px;
-  color:white;
-  font-family:'MyFonts';
-  font-size:18px;
-  text-align:center;
-  opacity: .75;
-}
+// #MapLink{
+//   position: absolute;
+//   width:100%;
+//   background-color:#808080;
+//   left:-1px;
+//   color:white;
+//   font-family:'MyFonts';
+//   font-size:18px;
+//   text-align:center;
+//   opacity: .75;
+// }
 
-#MapLink a:link,
-#MapLink a:visited,
-#MapLink a:hover {
-  color:purple;
-  text-decoration:none;
-}
+// #MapLink a:link,
+// #MapLink a:visited,
+// #MapLink a:hover {
+//   color:purple;
+//   text-decoration:none;
+// }
 
 // .pages{
 //   border:5;
