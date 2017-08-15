@@ -45,6 +45,6 @@ class CafesController < ApplicationController
   end
 
   def cafe_params
-    params.require(:cafe).permit(:name, :description, :street_address, :state, :editors_note, :website, :image, :mp3)
+    params.require(:cafe).permit(:name, :description, :street_address, :state, :editors_note, :website, :image, :yelp_link, :price, :mp3)
   end
 end
