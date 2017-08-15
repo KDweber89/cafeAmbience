@@ -1,19 +1,10 @@
 = simple_form_for @cafe do |c|
-  = c.input :name
-  = c.input :description
-  = c.input :street_address
-  = c.input :state
-
-  = c.input :editors_note
-
-
-  = c.label :mp3
-  = c.input :mp3, as: :file
-  / = c.file_field :mp3
-
-
+  = c.input :name, required: true
+  = c.input :description, maxlength: 400, required: true
+  = c.input :street_address, required: true
+  = c.input :state, required: true
+  = c.input :editors_note, required: true
+  / = c.label :mp3
+  = c.input :mp3, as: :file, required: true
+  = c.input :image, as: :file, required: true
   = c.submit :submit
-  = c.input :image, as: :file
-
-/ <%= simple_form_for @user, url: users_path do |form| %>
-

@@ -29,6 +29,14 @@ body {
   padding: 3.5rem 0;
 }
 
+.wrapper_without_padding {
+  width: 80%;
+  margin: 0 auto;
+  background-color:rgba(114, 103, 94, 0.5);
+  padding-left: 20px;
+  padding-right: 20px;
+}:Q
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
