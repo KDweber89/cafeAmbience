@@ -15,17 +15,42 @@
 
     .white_logo_image
     .second_background_image
-      / = render partial: 'player'
+      = render partial: 'player'
 
-      .cafe_info
-        %p= @cafe.name
-        %p= @cafe.description
-        %p= @cafe.street_address
-        %p= @cafe.state
-        %p= @cafe.editors_note
+      #callouts
+        .callout_inner
+          .wrapper
+            .callout
+              %h2 Cafes
+              %p Echo park pinterest brunch adaptogen glossier. Snackwave banjo semiotics, XOXO pickled keffiyeh art party chicharrones gentrify disrupt. Shoreditch chicharrones kinfolk
+            .callout
+              %h2 Cafes
+              %p Echo park pinterest brunch adaptogen glossier. Snackwave banjo semiotics, XOXO pickled keffiyeh art party chicharrones gentrify disrupt. Shoreditch chicharrones kinfolk
+            .callout
+              %h2 Cafes
+              %p Echo park pinterest brunch adaptogen glossier. Snackwave banjo semiotics, XOXO pickled keffiyeh art party chicharrones gentrify disrupt. Shoreditch chicharrones kinfolk
 
-        %p= @cafe.website
-        %p= @cafe.yelp_link
+
+
+    / .controller
+    /   .row
+    /     .col-md-6
+    /       this is an MD 4
+    /     .col-md-6
+    /       .col-md-12
+    /         this is an MD 4
+    /       .col-md-12
+    /         this is an MD 4
+
+    / .cafe_info
+    /   %p= @cafe.name
+    /   %p= @cafe.description
+    /   %p= @cafe.street_address
+    /   %p= @cafe.state
+    /   %p= @cafe.editors_note
+
+    /   %p= @cafe.website
+    /   %p= @cafe.yelp_link
 
 
 

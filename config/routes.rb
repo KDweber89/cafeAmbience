@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :cafes
   root 'welcome#index'
 
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :edit]
 end
