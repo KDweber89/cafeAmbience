@@ -177,6 +177,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-readline (0.5.5)
     redis (3.3.3)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -256,6 +257,7 @@ DEPENDENCIES
   pgreset
   puma (~> 3.7)
   rails (~> 5.1.1)
+  rb-readline
   redis (~> 3.0)
   sass-rails (~> 5.0)
   selenium-webdriver

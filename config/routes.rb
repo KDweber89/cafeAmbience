@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users, :only => [:show]
 
   get 'welcome/index'
   get '/about', to: 'welcome#about', as: 'about'
@@ -8,5 +9,6 @@ Rails.application.routes.draw do
   resources :cafes
   root 'welcome#index'
 
-  resources :users, :only => [:show, :edit]
+  # resources :users, :only => [:show, :edit]
+  # devise_for :users
 end
