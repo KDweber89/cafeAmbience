@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   # validates :old_enough_check, date: true
 
+  # binding.pry
+
   def age
     age = User.birth_date
   end
@@ -24,9 +26,8 @@ class User < ApplicationRecord
   end
 
   def old_enough_check
-    if old_enough = true
+    if old_enough
       errors.add :birth_date, 'must be older than 18'
     end
   end
-  # errors.add :birth_date, 'must be older than 18'
 end
