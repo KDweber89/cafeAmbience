@@ -9,13 +9,14 @@
 
   %link(href="https://fonts.googleapis.com/css?family=Quintessential" rel="stylesheet")
 
-/ edit_user_item_path(@user)
 
 %body
   %header
     .header_inner
-      %nav
-        / # = link_to 'Profile', user_path(@user)
+      %nav.pull-left
+        = link_to image_tag( 'favicon.ico'), root_path, id: "logo"
+      %nav.pull-right
+        / = link_to 'Profile', user_path(@user)
         = link_to 'About', about_path
         = link_to 'Cafes', cafes_path
         / = link_to 'Maps', maps_path
