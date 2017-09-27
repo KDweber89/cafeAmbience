@@ -3,15 +3,16 @@
     .cafe-index-title
       %h2
         Cafe's, Coffeeships, and Breweries
-    #cafes
-      - @cafes.each do |cafe|
-        %a{ href: (url_for [cafe])}
-          %figure.fig.cafe.fig-frame.fig-fill-blur{"data-caption" => "slide:down", "data-content" => "stack:fall", "data-figset" => "group-1", "data-interact" => "focus:top", "data-intro" => "fade", "data-state" => "ready"}
-            .fig-img
-              = image_tag cafe.image.url(:medium)
-            %figcaption.fig-caption
-              .fig-overlay
-                %canvas{:height => "250", :width => "375"}
-              .fig-caption-inner
-                %h1#focus= cafe.name
-                %p{:style => "font-size:13px"}= cafe.description
+    .col-md-12.col-xs-6
+      #cafes
+        - @cafes.each do |cafe|
+          %a{ href: (url_for [cafe])}
+            %figure.fig.cafe.fig-frame.fig-fill-blur{"data-caption" => "slide:down", "data-content" => "stack:fall", "data-figset" => "group-1", "data-interact" => "focus:top", "data-intro" => "fade", "data-state" => "ready"}
+              .fig-img
+                = image_tag cafe.image.url(:medium)
+              %figcaption.fig-caption
+                .fig-overlay
+                  %canvas{:height => "250", :width => "375"}
+                .fig-caption-inner
+                  %h1#focus= cafe.name
+                  %p{:style => "font-size:13px"}= cafe.description

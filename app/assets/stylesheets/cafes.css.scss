@@ -39,6 +39,13 @@
   }
 }
 
+// @media  screen and  (max-width: 800px) {
+//   #cafes{
+//     display: none;
+//   }
+// }
+
+
 #cafe_show {
   .title {
     @include bold_font;
