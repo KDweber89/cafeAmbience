@@ -7,7 +7,7 @@
       #cafes
         - @cafes.each do |cafe|
           %a{ href: (url_for [cafe])}
-            %figure.fig.cafe.fig-frame.fig-fill-blur{"data-caption" => "slide:down", "data-content" => "stack:fall", "data-figset" => "group-1", "data-interact" => "focus:top", "data-intro" => "fade", "data-state" => "ready"}
+            %figure.cafe.fig.fig-frame.fig-fill-blur{"data-caption" => "slide:down", "data-content" => "stack:fall", "data-figset" => "group-1", "data-interact" => "focus:top", "data-intro" => "fade", "data-state" => "ready"}
               .fig-img
                 = image_tag cafe.image.url(:medium)
               %figcaption.fig-caption
