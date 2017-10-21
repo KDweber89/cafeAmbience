@@ -1,9 +1,10 @@
-<div class = "common-background-with-overlay">
+<!-- <div class = "common-background-with-overlay"> -->
   <div class= "wrapper_with_padding">
     <h2>Log in</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs", style="font-weight: bold">
+    <div class= 'app-login'>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs-outside">
         <%= f.input :email, required: false, autofocus: true %>
         <%= f.input :password, required: false %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
@@ -12,8 +13,20 @@
       <div class="form-actions">
         <%= f.button :submit, "Log in", class: "button" %>
       </div>
-    <% end %>
+      <% end %>
+    </div>
+
+    <div class= "app-information">
+      <div class= "app-information-styles">
+        <h3>
+          Create and Account and Join the Cafe Ambiance Team
+        </h3>
+        <p>
+          Raw denim chartreuse snackwave kickstarter tousled bitters skateboard 3 wolf moon edison bulb jianbing readymade cornhole salvia green juice beard. Palo santo fam sriracha, yr mustache fashion axe raw denim offal microdosing. Flannel austin pabst slow-carb waistcoat. Meditation forage kale chips YOLO direct trade cardigan flexitarian art party lumbersexual asymmetrical fingerstache. Swag williamsburg tofu, subway tile kale chips put a bird on it la croix pour-over hoodie keytar succulents. Echo park yuccie enamel pin kickstarter microdosing. Tofu 8-bit single-origin coffee craft beer tilde skateboard wolf fixie cardigan. Mumblecore mlkshk pour-over vaporware humblebrag fam single-origin coffee direct trade marfa. Paleo yr chicharrones intelligentsia wolf, polaroid hoodie truffaut biodiesel 90's adaptogen health goth palo santo heirloom quinoa.
+        </p>
+      </div>
+    </div>
 
     <%= render "devise/shared/links" %>
   </div>
-</div>
+<!-- </div> -->

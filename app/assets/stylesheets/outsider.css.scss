@@ -1,0 +1,30 @@
+.app-login{
+  width: 50%;
+  padding-right: 20px;
+  float: left;
+}
+
+.form-inputs-outside{
+  font-weight: bold;
+}
+
+.app-information{
+  width: 50%;
+  float: right;
+  padding-left: 20px;
+}
+
+.app-information-styles{
+  background-color: grey;
+  opacity: .8;
+
+  p{
+    padding: 5px 30px 30px 30px;
+  }
+
+  h3{
+    padding: 10px;
+    text-align: center;
+  }
+}
+
