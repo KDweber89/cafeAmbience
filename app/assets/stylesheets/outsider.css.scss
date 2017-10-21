@@ -28,3 +28,35 @@
   }
 }
 
+.form-actions-container{
+  width: 100%;
+
+  .form-actions{
+    float: left;
+    width: 50%;
+  }
+
+  .devise-links{
+    float: right;
+    width: 50%;
+    padding-top: 30px;
+  }
+
+}
+
+.password-forgetting-div{
+  width: 60%;
+  margin: auto;
+}
+
+
+@media  screen and  (max-width: 750px) {
+  .app-login{
+    width: 100%;
+  }
+
+  .app-information{
+    width: 100%;
+  }
+
+}

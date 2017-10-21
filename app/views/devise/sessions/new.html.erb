@@ -10,16 +10,23 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "button" %>
+      <div class="form-actions-container">
+        <div class="form-actions">
+          <%= f.button :submit, "Log in", class: "button" %>
+        </div>
+
+        <div class = "devise-links">
+          <%= render "devise/shared/links" %>
+        </div>
       </div>
+
       <% end %>
     </div>
 
     <div class= "app-information">
       <div class= "app-information-styles">
         <h3>
-          Create and Account and Join the Cafe Ambiance Team
+          Cafe Ambiance is Amazing, and Parker will come up with a better Title Here
         </h3>
         <p>
           Raw denim chartreuse snackwave kickstarter tousled bitters skateboard 3 wolf moon edison bulb jianbing readymade cornhole salvia green juice beard. Palo santo fam sriracha, yr mustache fashion axe raw denim offal microdosing. Flannel austin pabst slow-carb waistcoat. Meditation forage kale chips YOLO direct trade cardigan flexitarian art party lumbersexual asymmetrical fingerstache. Swag williamsburg tofu, subway tile kale chips put a bird on it la croix pour-over hoodie keytar succulents. Echo park yuccie enamel pin kickstarter microdosing. Tofu 8-bit single-origin coffee craft beer tilde skateboard wolf fixie cardigan. Mumblecore mlkshk pour-over vaporware humblebrag fam single-origin coffee direct trade marfa. Paleo yr chicharrones intelligentsia wolf, polaroid hoodie truffaut biodiesel 90's adaptogen health goth palo santo heirloom quinoa.
@@ -27,6 +34,5 @@
       </div>
     </div>
 
-    <%= render "devise/shared/links" %>
   </div>
 <!-- </div> -->
