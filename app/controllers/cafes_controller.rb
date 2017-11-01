@@ -38,6 +38,10 @@ class CafesController < ApplicationController
     redirect_to cafes_path
   end
 
+  def root
+    redirect_to Cafe.all.sample
+  end
+
   private
 
   def find_cafe
