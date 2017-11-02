@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby ENV["CUSTOM_RUBY_VERSION"] || "2.3.1"
+
 gem 'rb-readline'
 
 gem 'pgreset'
