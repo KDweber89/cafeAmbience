@@ -112,6 +112,7 @@
   }
 }
 
+
 @media  screen and  (max-width: 600px) {
   #cafes{
     .cafe{
@@ -167,13 +168,24 @@
   }
 }
 
-.second_background_image{
+.second-background-image{
   background-image: url(info_background.jpg);
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat, repeat-y;
   background-size: cover;
 }
+
+@media  screen and  (max-width: 767px) {
+  .overflow-image{
+    background-image: url(cafe-ambiance-white-logo.jpg);
+    height: 65vh;
+    width: 100%;
+    background-repeat: no-repeat, repeat-y;
+    background-size: cover;
+  }
+}
+
 
 .cafe_info{
   width: 50%;
