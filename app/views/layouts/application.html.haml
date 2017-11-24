@@ -16,7 +16,8 @@
       %nav.pull-left
         = link_to image_tag( 'favicon.ico'), root_path, id: "logo"
       %nav.pull-right
-        = link_to 'Profile', edit_user_registration_path(@user)
+        -if user_signed_in?
+          = link_to 'Profile', edit_user_registration_path(@user)
         = link_to 'About', about_path
         = link_to 'Cafes', cafes_path
         / = link_to 'Maps', maps_path
@@ -25,10 +26,8 @@
           = link_to 'Sign Out', destroy_user_session_path, method: :get
         - else
           = link_to 'log_in', new_user_session_path
-  %p.notice= notice
+  / %p.notice= notice
   / %p.alert= alert
-
-
 
   = yield
 
