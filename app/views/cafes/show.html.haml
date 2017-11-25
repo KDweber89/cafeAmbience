@@ -29,7 +29,6 @@
               .cafe-page-details
                 %h2 Cafe Info
                 %p= @cafe.food
-                %p= @cafe.food
                 %p= @cafe.price
                 %p= @cafe.website
                 %p= @cafe.yelp_link
@@ -38,7 +37,7 @@
             .cafe-page-details-nest
               .cafe-page-details
                 %h2 Uploader Info
-                / %p= @user.first_name
+                %p= @cafe.user.email
 
     .overflow-image
 
@@ -60,5 +59,5 @@
     / = link_to 'Edit', edit_cafe_path(@cafe)
     / = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
 
-:javascript
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");z
+/ :javascript
+/   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");z

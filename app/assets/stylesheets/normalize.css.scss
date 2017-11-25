@@ -150,7 +150,11 @@ samp {
  * Add the correct font style in Android 4.3-.
  */
 
-dfn {
+// dfn {
+//   font-style: italic;
+// }
+
+fn {
   font-style: italic;
 }
 
