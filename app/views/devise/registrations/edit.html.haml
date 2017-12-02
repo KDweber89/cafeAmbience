@@ -5,8 +5,11 @@
     = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = f.error_notification
       .form-inputs
+        .fifty-width
+          = f.input :first_name, required: true, autofocus: true
+        .fifty-width
+          = f.input :last_name, required: true, autofocus: true
         = f.input :email, required: true, autofocus: true
-        = f.input :image, as: :file, required: true
 
         - if devise_mapping.confirmable? && resource.pending_reconfirmation?
           %p
@@ -29,4 +32,4 @@
 
     = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
 
-      = f.input :image, as: :file, class: 'image-test-class', required: true
+      = f.input :image, as: :file, required: true, class: 'image-test-class'

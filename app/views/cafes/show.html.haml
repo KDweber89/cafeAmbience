@@ -41,10 +41,11 @@
               .cafe-page-details
                 %h2 Uploader Info
                 %p= @cafe.user.email
-                / %p= @cafe.user.image
-                / = image_tag @cafe.image.url(:medium)
-                = image_tag @cafe.user.image.url(:medium)
 
+                - if @cafe.user.image
+                  = image_tag @cafe.image.url(:medium)
+                - else
+                  = image_tag 'cafe-ambiance-white-logo.jpg', alt: ''
     .overflow-image
 
 
