@@ -9,6 +9,7 @@ ruby ENV["CUSTOM_RUBY_VERSION"] || "2.3.1"
 
 gem 'rb-readline'
 
+gem 'pry-rails', :group => :development
 gem 'pgreset'
 gem "paperclip", "~> 5.0.0"
 gem 'rails', '~> 5.1.1'

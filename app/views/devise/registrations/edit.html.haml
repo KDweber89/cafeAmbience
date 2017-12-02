@@ -24,8 +24,4 @@
   - if @user.image?
     = image_tag @user.image.url(:medium)
   - else
-    %img{:alt => "Cafe Ambiance", :src => 'https://www.tesla.com/tesla_theme/assets/img/modals/model-select-models.png?20160811' }
-    %img{:src => '/images/black_logo.jpg', :alt => "Cafe Ambiance" }
-
-
-
+    = image_tag 'cafe-ambiance-white-logo.jpg', alt: ''
