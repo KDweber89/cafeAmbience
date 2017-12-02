@@ -33,6 +33,7 @@
                 %p= @cafe.website
                 %p= @cafe.yelp_link
                 %p= @cafe.street_address
+                %p= @cafe.city
                 %p= @cafe.state
 
           .col-md-4
@@ -40,21 +41,11 @@
               .cafe-page-details
                 %h2 Uploader Info
                 %p= @cafe.user.email
+                / %p= @cafe.user.image
+                / = image_tag @cafe.image.url(:medium)
+                = image_tag @cafe.user.image.url(:medium)
 
     .overflow-image
-
-
-
-    / .cafe_info
-    /   %p= @cafe.name
-    /   %p= @cafe.description
-    /   %p= @cafe.street_address
-    /   %p= @cafe.state
-    /   %p= @cafe.editors_note
-
-    /   %p= @cafe.website
-    /   %p= @cafe.yelp_link
-
 
 
     / = link_to 'All Cafes ', cafes_path

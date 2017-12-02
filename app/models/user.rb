@@ -1,19 +1,20 @@
 class User < ActiveRecord::Base
-  validate :age_restriction
+  # validate :age_restriction
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :cafes
 
-  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  # has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/cafe-ambiance-white-logo.png"
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
-  def age_restriction
-    if (birth_date.to_date + 18.years) < Date.today # assuming dob format is mm/dd/yy
-      errors.add :birth_date, 'must be older than 18'
-    end
-  end
+  # def age_restriction
+  #   if (@user&.birth_date&.to_date + 18.years) < Date.today # assuming dob format is mm/dd/yy
+  #     errors.add :birth_date, 'must be older than 18'
+  #   end
+  # end
 end
 
 
