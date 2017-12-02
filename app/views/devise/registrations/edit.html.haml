@@ -21,7 +21,12 @@
       Unhappy? #{link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
     = link_to "Back", :back
 
-  - if @user.image?
-    = image_tag @user.image.url(:medium)
-  - else
-    = image_tag 'cafe-ambiance-white-logo.jpg', alt: ''
+  .user-image
+    - if @user.image?
+      = image_tag @user.image.url(:medium)
+    - else
+      = image_tag 'cafe-ambiance-white-logo.jpg', alt: '', style: 'display: block; margin: auto; width: 40%;'
+
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+
+      = f.input :image, as: :file, class: 'image-test-class', required: true
