@@ -12,6 +12,14 @@ Rails.application.routes.draw do
   resources :cafes
   root 'cafes#root'
 
+  # authenticated :user do
+  #   root to: "cafes#root"
+  # end
+
+  # unauthenticated :user do
+  #   root to: 'cafes#index'
+  # end
+
   # resources :users, :only => [:show, :edit]
   # devise_for :users
 end

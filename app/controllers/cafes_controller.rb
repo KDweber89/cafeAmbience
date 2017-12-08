@@ -1,4 +1,5 @@
 class CafesController < ApplicationController
+  # before_action :authenticate_user!
   before_action :find_cafe, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -9,7 +10,11 @@ class CafesController < ApplicationController
   end
 
   def new
-    @cafe = current_user.cafes.build
+    if current_user
+      @cafe = current_user.cafes.build
+    else
+      redirect_to about_path
+    end
   end
 
   def create
