@@ -24,27 +24,7 @@
           To play the media you will need to either update your browser to a recent version or update your
           = succeed "." do
             %a{:href => "http://get.adobe.com/flashplayer/", :target => "_blank"} Flash plugin
-
-
-:javascript
-  / $(document).ready(function(){
-  /   $("#jquery_jplayer_1").jPlayer({
-  /     ready: function () {
-  /       $(this).jPlayer("setMedia", {
-  /         mp3: "<%= @cafe.mp3.url %>",
-  /       });
-  /     },
-  /     swfPath: "/js",
-  /     supplied: "mp3"
-  /   });
-  / });
-
-   $(document).ready(function(){
-    console.log("document ready");
-    $("#jquery_jplayer_1").jPlayer({
-      ready: function () {
-        console.log("jplayer ready");
-        $(this).jPlayer("setMedia", {
-          mp3: "<%= @cafe.mp3.url %>",
-        });
-      }
+          %h2 Listen to Song
+          #song
+          %audio#player{controls: 'controls', autoplay: 'true'}
+            %source{src: @cafe.mp3.url}

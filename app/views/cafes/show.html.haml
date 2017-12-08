@@ -8,14 +8,9 @@
         Today's cafe from
         = @cafe.name
 
-    / .other_test
-    /   %h3=  @cafe.name
-    /   %p= @cafe.description
-
-
     .white_logo_image
     .second-background-image
-      / = render partial: 'player'
+      = render partial: 'player'
       .container
         .row
           .col-md-4
@@ -40,12 +35,12 @@
             .cafe-page-details-nest
               .cafe-page-details
                 %h2 Uploader Info
-                %p= @cafe.user.email
-
                 - if @cafe.user.image
                   = image_tag @cafe.image.url(:medium)
                 - else
                   = image_tag 'cafe-ambiance-white-logo.jpg', alt: ''
+                %p This cafe uploaded by #{@cafe.user.first_name} #{@cafe.user.last_name}
+                %p= @cafe.user.email
     .overflow-image
 
 
@@ -54,4 +49,4 @@
     / = link_to 'Delete', cafe_path(@cafe), method: :delete, data: { confirm: 'Are you sure?' }
 
 / :javascript
-/   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");z
+/   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
