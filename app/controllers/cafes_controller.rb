@@ -39,7 +39,11 @@ class CafesController < ApplicationController
   end
 
   def root
-    redirect_to Cafe.all.sample
+    if Cafe.all.count > 0
+      redirect_to Cafe.all.sample
+    else
+      redirect_to new_cafe_path
+    end
   end
 
   private
