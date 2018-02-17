@@ -10,7 +10,8 @@
 
     .white_logo_image
     .second-background-image
-      = render partial: 'player'
+      .hidePlayer{ :style => "display: none; " }
+        = render partial: 'player'
       .container
         .row
           .col-md-4

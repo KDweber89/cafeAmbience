@@ -1,30 +1,32 @@
-#cafe_content
-  #jquery_jplayer_1.jp-jplayer
-  #jp_container_1.jp-audio
-    .jp-type-single
-      .jp-gui.jp-interface
-        %ul.jp-controls
-          %li
-            %a.jp-play{:href => "javascript:;", :tabindex => "1"} 
-          %li
-            %a.jp-pause{:href => "javascript:;", :tabindex => "1"} 
-          %li
-            %a.jp-mute{:href => "javascript:;", :tabindex => "1", :title => "mute"} 
-          %li
-            %a.jp-unmute{:href => "javascript:;", :tabindex => "1", :title => "unmute"} 
-        .jp-progress
-          .jp-seek-bar
-            .jp-play-bar
-        .jp-time-holder
-          .jp-current-time
-        .jp-volume-bar
-          .jp-volume-bar-value
-        .jp-no-solution
-          %span Update Required
-          To play the media you will need to either update your browser to a recent version or update your
-          = succeed "." do
-            %a{:href => "http://get.adobe.com/flashplayer/", :target => "_blank"} Flash plugin
-          %h2 Listen to Song
-          #song
-          %audio#player{controls: 'controls', autoplay: 'true'}
-            %source{src: @cafe.mp3.url}
+#song
+%audio#player{controls: 'controls', autoplay: 'true', loop: 'true' }
+  %source{src: @cafe.mp3.url}
+
+/ %audio#music{:controls => "controls"}
+/   %source{:src => "@cafe.mp3.url", :type => "audio/ogg"}
+/   %source{:src => "@cafe.mp3.url", :type => "audio/mpeg"}
+/ %button#pButton.play{:onclick => "playAudio()"}
+
+
+/ %audio#music{:controls => "controls"}
+/   %source{:src => "@cafe.mp3.url"}
+/     .play
+/     .pause
+/   %button#pButton.play{:onclick => "playAudio()"}
+
+/ :javascript
+
+/ var music = document.getElementById('music');
+
+/ function playAudio() {
+/   if (music.paused) {
+/     music.play();
+/     pButton.className = "";
+/     pButton.className = "pause";
+/   } else {
+/     music.pause();
+/     pButton.className = "";
+/     pButton.className = "play";
+/   }
+/ }
+
