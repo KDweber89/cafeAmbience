@@ -9,12 +9,12 @@
 
   %link(href="https://fonts.googleapis.com/css?family=Quintessential" rel="stylesheet")
 
-
 %body
   %header
     .header_inner
       %nav.pull-left
-        = link_to image_tag( 'favicon.ico'), root_path, id: "logo"
+        = link_to image_tag( 'cafe_ambience_white_vector.png'), root_path, class: "logo"
+
       %nav.pull-right
         -if user_signed_in?
           = link_to 'Profile', edit_user_registration_path(@user)
